@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>The Bay Watch | Welcome</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.html"></a>TBW</h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="current" href="booking.html">Booking</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="amenities.html">Amenities</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="policies.html">Policies</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="book-info" class="bg-dark py-3">
+      <div class="container">
+        <div class="info-left">
+          <h1><span class="text-primary">Book your stay</span> with us!</h1>
+          <p>
+            We can also accommodate and host any special occasions, weddings, or
+            corporate events here at The Bay Watch.
+          </p>
+          <p>
+            Whether it's a weekend retreat or an extended vacation, our resort
+            hostel promises an unforgettable experience.
+          </p>
+        </div>
+        <div class="info-right">
+          <img src="./img/home1.jpg" alt="hotel" />
+        </div>
+      </div>
+    </section>
+
+    <div class="bForm">
+      <h2>Hotel Booking Form</h2>
+      <form id="bookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" required />
+
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" required />
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" required />
+
+        <input type="submit" value="Book Now!" />
+      </form>
+    </div>
+
+    <script>
+      document.getElementById("bookingForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var checkin = document.getElementById("checkin").value;
+        var checkout = document.getElementById("checkout").value;
+        var guests = document.getElementById("guests").value;
+
+        // Create object to store booking details
+        var bookingDetails = {
+          name: name,
+          email: email,
+          checkin: checkin,
+          checkout: checkout,
+          guests: guests
+        };
+      }
+    </script>
+
+    <section id="features">
+      <div class="box bg-light">
+        <h3>Location</h3>
+        <p>805 Argonaut Hwy SBFZ, Zambales</p>
+      </div>
+      <div class="box bg-primary">
+        <h3>Email Us</h3>
+        <p>thebaywatch@phresorts.com</p>
+      </div>
+      <div class="box bg-light">
+        <h3>Call Us</h3>
+        <p>(+63) 987 654 3210</p>
+      </div>
+    </section>
+
+    <div class="clr"></div>
+    <footer id="main-footer">
+      The Bay Watch &copy; 2024, All Rights Reserved
+    </footer>
+  </body>
+</html>
