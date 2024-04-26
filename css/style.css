@@ -172,7 +172,7 @@ p{
 #home-info .info-img{
     float: left;
     width: 50%;
-    background: url('../img/ro1.PNG') no-repeat;
+    background: url('img/ro1.PNG') no-repeat;
     min-height: 100%
 }
 
